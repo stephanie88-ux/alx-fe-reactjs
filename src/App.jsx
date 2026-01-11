@@ -15,4 +15,4 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
