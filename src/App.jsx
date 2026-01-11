@@ -3,16 +3,16 @@ import './App.css'
 import Header from './components/Header'
 import MainContent from './MainContent'
 import Footer from './Footer'
+import <UserProfile from './UserProfile'
+
  
-
-  function app () {
+function App() {
   return (
-    <div className='App'>
-      <header />
+    <div className="App">
+      <Header />
       <MainContent />
-      <Footer />  
-
+      <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
+      <Footer />
     </div>
   );
- }
- export default app
+}
