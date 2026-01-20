@@ -2,9 +2,8 @@ function UserProfile(props) {
   return (
     <div style={{ 
       border: '1px solid gray', 
-      padding: '20px', 
-      margin: '15px',
-      borderRadius: '8px',
+      padding: '10px', 
+      margin: '10px',
       backgroundColor: '#f9f9f9'
     }}>
       <h2 style={{ color: 'blue', fontSize: '24px' }}>{props.name}</h2>
