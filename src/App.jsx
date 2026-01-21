@@ -1,18 +1,20 @@
-import UserProfile from './components/UserProfile'
-import Header from './components/Header'
-import MainContent from './components/MainContent'
-import Footer from './components/Footer'
-import UserProfile from './components/UserProfile'
+import { BrowserRoute, Routes, Route } from "react-router-dom";  
+import Home from "./my-company/Home";
+import About from "./my-company/About";
+import services from "./my-company/Services";
+import Contact from "./my-company/Contact";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <MainContent />
-      <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
-      <Footer />
-    </div>
-  );
+    <BrowserRoute>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<services />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </BrowserRoute>
+  )
 }
 
 export default App;
