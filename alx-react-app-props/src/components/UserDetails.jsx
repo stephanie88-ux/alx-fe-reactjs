@@ -1,22 +1,12 @@
-import { useContext } from 'react';
-import UserContext from '../UserContext';
+import React from 'react';  
+import userContext from '../contexts/UserContext';
 
-function UserDetails() {
-  // Consume UserContext using useContext hook
-  const userData = useContext(UserContext);
-
+ function UserDetails() { 
+ const userData = useContext(UserContext);
   return (
-    <div style={{
-      border: '1px solid #ccc',
-      padding: '20px',
-      margin: '10px',
-      borderRadius: '8px'
-    }}>
-      <h3>User Details</h3>
-      <p><strong>Name:</strong> {userData.name}</p>
-      <p><strong>Email:</strong> {userData.email}</p>
-      <p><strong>Age:</strong> {userData.age}</p>
-      <p><strong>Bio:</strong> {userData.bio}</p>
+    <div>
+      <p>Name: {userData.name}</p>
+      <p>Email: {userData.email}</p>
     </div>
   );
 }
