@@ -1,4 +1,4 @@
- import { BrowserRoute, Routes, Route } from "react-router-dom";  
+import { BrowserRoute, Routes, Route } from "react-router-dom";  
 
 import Home from "./my-company/Home";
 import About from "./my-company/About";
@@ -15,6 +15,7 @@ function App() {
     <Link to="/about" style ={{ backgroundColor: '#ccc', padding: '5px' }}>About</Link>
     <Link to="/services" style ={{ color: 'white', padding: '5px' }}>Services</Link>
     <Link to="/contact" style ={{ color: 'white', padding: '5px' }}>Contact</Link>
+    
     </nav>
 
 
