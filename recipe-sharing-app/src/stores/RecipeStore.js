@@ -4,3 +4,5 @@ const UseRecipeStore = create((set) => ({
     addRecipe : (recipe) => set( state => ({recipe : [...state.recipes, recipe]})),
     setRecipe : (recipes) => set({recipes}),
 }));
+
+export default UseRecipeStore;
