@@ -4,6 +4,7 @@ const RecipeDetails = ({ recipe }) => {
     const deleteRecipe = useRecipeStore((state) => state.deleteRecipe);
     const handleDelete = () => {
            deleteRecipe(recipe.id);
+    const navigate = useNavigate();
            navigate('/recipes');
 }};
 
