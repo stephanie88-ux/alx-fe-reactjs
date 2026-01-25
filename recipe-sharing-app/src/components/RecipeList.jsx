@@ -1,4 +1,4 @@
-import {link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import useRecipeStore from './recipeStore';
 
   const RecipeDetails = ({ recipeId }) => {
@@ -14,8 +14,6 @@ import useRecipeStore from './recipeStore';
       <div>
         <h1>{filteredRecipe.title}</h1>
         <p>{filteredRecipe.description}</p>
-      <link to="/recipes">Back to Recipes</link>
-      
       </div>
     );
   };
