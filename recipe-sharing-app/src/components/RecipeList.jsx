@@ -1,18 +1,16 @@
-import { useRecipeStore } from './recipeStore';
+ import create from 'zustand';
 
-function RecipeList() {
-    const recipes = useRecipeStore(state => state.recipes);
+const useRecipeStore = create(set => ({
+  recipes: [],
+  searchTerm: '',
+  setSearchTerm: (term) => set({ searchTerm: term }),
+  filteredRecipes: [],
+  filterRecipes: () => set(state => ({
+    filteredRecipes: state.recipes.filter(recipe =>
+      recipe.title.toLowerCase().includes(state.searchTerm.toLowerCase())
+      
+    ));
+  }));
 
-    return (
-        <div>
-            {recipes.map(recipe => (
-                <div key={recipe.id}>
-                    <h3>{recipe.title}</h3>
-                    <p>{recipe.description}</p>
-                </div>
-            ))}
-        </div>
-    );
-}
 
-export default RecipeList;
+export { useRecipeStore };
