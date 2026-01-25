@@ -12,9 +12,10 @@ import useRecipeStore from './recipeStore';
 
     return (
       <div>
-        <h1>{recipe.title}</h1>
-        <p>{recipe.description}</p>
-
+        <h1>{filteredRecipe.title}</h1>
+        <p>{filteredRecipe.description}</p>
+      <link to="/recipes">Back to Recipes</link>
+      
       </div>
     );
   };
