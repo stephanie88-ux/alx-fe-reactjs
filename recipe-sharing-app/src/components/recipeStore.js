@@ -1,5 +1,7 @@
 import React from 'react';
 import { useRecipeStore } from './recipeStore';
+import favourites from './FavoritesList';
+import recommendations from './RecommendationsList';
 
 const SearchBar = () => {
 const setSearchTerm = useRecipeStore((state) => state.setSearchTerm);
