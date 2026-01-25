@@ -1,16 +1,7 @@
-import RecipeList from './components/RecipeList';
-import AddRecipeForm from './components/AddRecipeForm';
+import React from 'react';
+import ReactDom from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 
-function App () {
-  return (
-    <div style={{ 
-    maxWidth: '800px', 
-     margin: '0 auto', 
-     padding: '20px' }}>
-     
-      <RecipeList />
-      <AddRecipeFrom />
-    </div>
-  )
 
-}
+
+ 
