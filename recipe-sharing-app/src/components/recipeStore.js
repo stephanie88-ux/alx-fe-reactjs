@@ -1,9 +1,7 @@
-import { useRecipeStore, setRecipes } from '../components/recipeStore';
+ import { useRecipeStore } from '../components/recipeStore';
 
-const UseRecipeStore = create((set) => ({
-    recipes: [],
-    addRecipe : (recipe) => set( state => ({recipe : [...state.recipes, recipe]})),
-    setRecipe : (recipes) => set({recipes}),
-}));
-
-export default UseRecipeStore;
+const RecipeDetails = ({ recipe }) => {
+    const recipe = useRecipeStore((state) => 
+        state.recipes.find (recipe => recipe.id === recipe.id)
+);
+};
