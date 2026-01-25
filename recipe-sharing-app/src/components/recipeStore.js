@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRecipeStore } from './recipeStore';
-import favourites from './FavoritesList';
+import favorites from './FavoritesList';
 import recommendations from './RecommendationsList';
 
 const SearchBar = () => {
