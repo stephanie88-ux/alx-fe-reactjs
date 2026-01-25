@@ -1,16 +1,20 @@
- import create from 'zustand';
+import {link } from 'react-router-dom';
+import useRecipeStore from './recipeStore';
 
-const useRecipeStore = create(set => ({
-  recipes: [],
-  searchTerm: '',
-  setSearchTerm: (term) => set({ searchTerm: term }),
-  filteredRecipes: [],
-  filterRecipes: () => set(state => ({
-    filteredRecipes: state.recipes.filter(recipe =>
-      recipe.title.toLowerCase().includes(state.searchTerm.toLowerCase())
-      
-    ));
-  }));
+  const RecipeDetails = ({ recipeId }) => {
+    const filteredRecipe = useRecipeStore((state) => 
+      state.recipes.find((recipe) => recipe.id === recipeId)
+    );
 
+    const map = useRecipeStore((state) => state.recipes
+        .filter((recipe) => recipe.id === recipeId) 
+    );
 
-export { useRecipeStore };
+    return (
+      <div>
+        <h1>{recipe.title}</h1>
+        <p>{recipe.description}</p>
+
+      </div>
+    );
+  };
