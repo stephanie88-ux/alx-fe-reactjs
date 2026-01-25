@@ -1,6 +1,14 @@
-import { addRecipe, deleteRecipe, updateRecipe } from '../recipeDetails';
-const RecipeDetails = ({ recipe }) => {
-    const recipe = useRecipeStore((state) => 
-        state.recipes.find (recipe => recipe.id === recipe.id)
-);
+import React from 'react';
+import { useRecipeStore } from './recipeStore';
+
+const SearchBar = () => {
+  const setSearchTerm = useRecipeStore(state => state.setSearchTerm);
+
+  return (
+    <input
+      type="text"
+      placeholder="Search recipes..."
+      onChange={(e) => setSearchTerm(e.target.value)}
+    />
+  );
 };
