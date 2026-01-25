@@ -2,7 +2,11 @@ import React from 'react';
 import { useRecipeStore } from './recipeStore';
 
 const SearchBar = () => {
-  const SearchTerm = useRecipeStore(state => state.setSearchTerm);
+const setSearchTerm = useRecipeStore((state) => state.setSearchTerm);
+
+searchTerm = (term) => {
+    setSearchTerm(term);
+};
 
   return (
     <input
