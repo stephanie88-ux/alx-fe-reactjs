@@ -5,3 +5,5 @@ const RecipeDetails = ({ recipe }) => {
         state.recipes.find (recipe => recipe.id === recipe.id)
 );
 };
+
+ export default RecipeDetails;
