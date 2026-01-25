@@ -1,14 +1,16 @@
 import React from 'react';
-import ReactDom from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import  Path from 'path';
-import Routes from './routes/Route';
+import AddRecipeForm from './components/AddRecipeForm';
+import RecipeList from './components/RecipeList';
+import SearchBar from './components/SearchBar';
+import { BrowserRouter, ReactDom } from 'react-router-dom';
+import Routes from './Routes';
 
 const root = ReactDom.createRoot(document.getElementById('root'));
 root.render(
     <BrowserRouter>
         <Routes />
     </BrowserRouter>
+
 );
 
 
