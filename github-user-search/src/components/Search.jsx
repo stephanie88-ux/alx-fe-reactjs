@@ -39,7 +39,15 @@ export default function Search({onUserDataFetched}) {
     );
 
 };
-
+ 
+  {/* Loading State */}
+      {loading && <p>Loading...</p>}
+      
+      {/* Error State */}
+      {error && <p>Looks like we cant find the user</p>}
+      
+      {/* Success State - Display User Data */}
+      {userData && !loading && !error && (
 <div> 
     <img src={userData.avatar_url} alt="User Avatar" width="100" />
     <h2>{userData.name || userData.login}</h2>
@@ -47,3 +55,4 @@ export default function Search({onUserDataFetched}) {
     <p>Followers: {userData.followers} | Following: {userData.following}</p>
     <a href={userData.html_url} target="_blank" rel="noopener noreferrer">View Profile on GitHub</a>
 </div>
+      )};
