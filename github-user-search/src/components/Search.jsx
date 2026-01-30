@@ -37,4 +37,13 @@ export default function Search({onUserDataFetched}) {
             <button disabled={loading}>Search</button>
         </form>
     );
-}
+
+};
+
+<div> 
+    <img src={userData.avatar_url} alt="User Avatar" width="100" />
+    <h2>{userData.name || userData.login}</h2>
+    <p>{userData.bio}</p>
+    <p>Followers: {userData.followers} | Following: {userData.following}</p>
+    <a href={userData.html_url} target="_blank" rel="noopener noreferrer">View Profile on GitHub</a>
+</div>
