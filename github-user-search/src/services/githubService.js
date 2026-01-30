@@ -25,5 +25,6 @@ export default function Search({onUserDataFetched}) {
         } finally {
             setLoading(false);
         }
+        //api.github.com/users/${username    
     };
 
