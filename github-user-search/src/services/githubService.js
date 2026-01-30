@@ -2,26 +2,9 @@ import {axios} from 'axios';
 import {fetchUserDtata} from './githubService';
 
 
-export const searchUsers = async (query) => {   
-const {username, location, minRepos} = query;
-
-let queryParts = [];
-
-if (username) {
-    queryParts.push(`${username} in:login`);
-
-}
-if (location) { 
-    queryParts.push(`location:${location}`);
-}
-if (miniRepos) {
-    queryParts.push(`repos:>=${miniRepos}`);
-}
-
-const queryString = queryParts.join('+');
-const response = await fetch(`https://api.github.com/search/users?q=${queryString}`);
-const data = await response.json();
-return data.items;
+export const fetchUserData = async (username) => {
+  const response = await axios.get(`https://api.github.com/users/${username}`);
+  return response.data;
 };
 
 
