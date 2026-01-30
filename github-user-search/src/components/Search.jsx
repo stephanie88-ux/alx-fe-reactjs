@@ -9,8 +9,8 @@ export default function Search({onUserDataFetched}) {
     const handleInputChange = (e) => {
         setUsername(e.target.value);
     };
-    
-    const handleSubmit = async (e) => {
+   
+    async function handleSubmit(e) {
         e.preventDefault();
         if (!username) return;
 
@@ -24,8 +24,7 @@ export default function Search({onUserDataFetched}) {
         } finally {
             setLoading(false);
         }
-    };
-
+    }
     return (
         <form onSubmit={handleSubmit}>
             <input
@@ -37,7 +36,13 @@ export default function Search({onUserDataFetched}) {
             <button disabled={loading}>Search</button>
         </form>
     );
-
+ 
+    const mapsStateToProps = (state) => {
+    return {
+        userData: state.userData,
+        loading: state.loading,
+        error: state.error,
+    };  
 };
  
   {/* Loading State */}
@@ -55,4 +60,7 @@ export default function Search({onUserDataFetched}) {
     <p>Followers: {userData.followers} | Following: {userData.following}</p>
     <a href={userData.html_url} target="_blank" rel="noopener noreferrer">View Profile on GitHub</a>
 </div>
-      )};
+
+ 
+
+)}};
