@@ -49,7 +49,7 @@ function Search() {
         </form>
         
         {loading && <p>Loading...</p>}
-        {error && <p>looks like we cant find that user</p>}
+        {error && <p>looks like we cant find the user</p>}
         {userData && (
             <div>
                 <h2>{userData.login}</h2>
