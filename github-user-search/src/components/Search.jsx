@@ -1,6 +1,22 @@
 import { useState } from 'react';
 import { fetchUserData } from '../services/githubService';
 
+export const fetchUserData = async ({username, location, minRepos}) => {  
+try {
+    let query = `https://api.github.com/search/users?q=${username}`;
+    if (location) {
+        query += `+location:${location}`;
+    }
+    if (minRepos) {
+        query += `+repos:>=${minRepos}`;
+    }
+    const response = await axios.get(query);
+    return response.data.items; 
+} catch (error) {
+    console.error('Error fetching user data:', error);
+    throw error;
+}};
+
 function Search() {
   const [username, setUsername] = useState('');
   const [userData, setUserData] = useState(null);
