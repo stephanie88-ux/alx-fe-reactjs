@@ -35,6 +35,32 @@ function Search() {
        
       setLoading(false);
     }
+
+    return (
+    <div>   
+        <form onSubmit={handleSubmit}>
+            <input 
+                type="text" 
+                value={username} 
+                onChange={handleInputChange} 
+                placeholder="Enter GitHub username" 
+            />
+            <button type="submit">Search</button>
+        </form>
+        
+        {loading && <p>Loading...</p>}
+        {error && <p>Error fetching user data.</p>}
+        {userData && (
+            <div>
+                <h2>{userData.login}</h2>
+                <img src={userData.avatar_url} alt={userData.login} width="100" />
+                <p>Followers: {userData.followers}</p>
+                <p>Following: {userData.following}</p>
+                <p>Public Repos: {userData.public_repos}</p>
+            </div>
+        )}
+    </div>
+    )
 }};
 
    
