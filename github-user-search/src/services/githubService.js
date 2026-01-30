@@ -1,3 +1,7 @@
+import {axios} from 'axios';
+import {fetchUserDtata} from './githubService';
+
+
 export const searchUsers = async (query) => {   
 const {username, location, minRepos} = query;
 

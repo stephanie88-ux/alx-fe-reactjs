@@ -1,4 +1,4 @@
-import { axios } from 'axios';
+import { useState } from 'react';
 import { fetchUserData } from '../services/githubService';
 
 function Search() {
