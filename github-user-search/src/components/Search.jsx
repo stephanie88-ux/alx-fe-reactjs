@@ -1,34 +1,34 @@
-import {useState} from 'react';
-import {fetchUserData} from './githubService';
+import { useState } from 'react';
+import { fetchUserData } from '../services/githubService';
 
-const search = {
-    username: '',
-    location: '',
-    minRepos: 0,
-};
- 
-const [results, setResults] = useState([]);
-const [loading, setLoading] = useState(false);
-const [error, setError] = useState(null);
+function Search() {
+  const [username, setUsername] = useState('');
+  const [userData, setUserData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
-const handlesubmit = (e) => {
+  const handleInputChange = (e) => {
+    setUsername(e.target.value);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!username.trim()) return;
+    
     setLoading(true);
-    setError(null);
+    setError(false);
+    setUserData(null);
+    
+    try {
+      const data = await fetchUserData(username);
+      setUserData(data);
+    } catch (err) {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    fetchUserData(search)
-        .then((data) => {
-            setResults(data);
-            setLoading(false);
-        })
-        .catch((err) => {
-            setError('Error fetching data');
-            setLoading(false);
-        });
-        
-     
 }
 
-
-
-   
+export default Search;
