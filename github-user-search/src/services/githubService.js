@@ -1,5 +1,5 @@
 export const searchUsers = async (query) => {   
-const {username, location, miniRepos} = query;
+const {username, location, minRepos} = query;
 
 let queryParts = [];
 
