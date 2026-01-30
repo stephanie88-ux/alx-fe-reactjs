@@ -10,7 +10,15 @@ function Search() {
     setUsername(e.target.value);
   };
 
-   
+  const mapUserData = (userData) => {
+    return {
+      ...userData,
+      followers: userData.followers || 0,
+      following: userData.following || 0,
+      public_repos: userData.public_repos || 0
+    };
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     
