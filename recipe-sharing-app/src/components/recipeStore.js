@@ -4,7 +4,6 @@ import favorites from './FavoritesList';
 import recommendations from './RecommendationsList';
 import { zustand, create, addRecipe, setRecipes } from 'zustand';
 
-import RecipeList from './components/RecipeList';
 
 
 const RecipeList = () => {
@@ -26,4 +25,3 @@ searchTerm = (term) => {
   );
 }};
 
-export default RecipeList; 

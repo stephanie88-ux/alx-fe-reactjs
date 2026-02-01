@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import useRecipeStore from './recipeStore';
 
+import RecipeList from './components/RecipeList';
+
   const RecipeDetails = ({ recipeId }) => {
     const filteredRecipe = useRecipeStore((state) => 
       state.recipes.find((recipe) => recipe.id === recipeId)
@@ -17,3 +19,5 @@ import useRecipeStore from './recipeStore';
       </div>
     );
   };
+
+export default RecipeDetails;
