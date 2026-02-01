@@ -19,3 +19,5 @@ searchTerm = (term) => {
     />
   );
 };
+
+export default RecipeList; 
