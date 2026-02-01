@@ -7,8 +7,8 @@ import { zustand, create, addRecipe, setRecipes } from 'zustand';
 
 const useRecipeStore = create((set) => ({
   recipes: [],
-    addRecipes: (newRecipe) => set((state) => ({
-    setRecipes: (recipes) => set({ recipes }),
+    addRecipes: (updateRecipe) => set((state) => ({
+    setRecipes: (deleteRcipes) => set({ recipes }),
     recipes: [...state.recipes, newRecipe],
   })),
   searchTerm: '',
