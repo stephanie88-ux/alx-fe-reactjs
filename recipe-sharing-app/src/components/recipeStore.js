@@ -4,6 +4,9 @@ import favorites from './FavoritesList';
 import recommendations from './RecommendationsList';
 import { zustand, create, addRecipe, setRecipes } from 'zustand';
 
+const RecipeList = () => {
+  const recipes = useRecipeStore((state) => state.recipes);
+  const searchTerm = useRecipeStore((state) => state.searchTerm.toLowerCase());
 const SearchBar = () => {
 const setSearchTerm = useRecipeStore((state) => state.setSearchTerm);
 
@@ -18,6 +21,6 @@ searchTerm = (term) => {
       onChange={(e) => setSearchTerm(e.target.value)}
     />
   );
-};
+}};
 
 export default RecipeList; 
