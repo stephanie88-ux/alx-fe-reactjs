@@ -75,18 +75,30 @@ function Search() {
         {loading && <p>Loading...</p>}
         {error && <p> Looks like we cant find the user.</p>}
         {userData && (
-            <div>
-                <h2>{userData.login}</h2>
-                <img src={userData.avatar_url} alt={userData.login} width="100" />
-                <p>Followers: {userData.followers}</p>
-                <p>Following: {userData.following}</p>
-                <p>Public Repos: {userData.public_repos}</p>
-            </div>
+
+            
+             <div>
+    <img 
+      src={userData.avatar_url} 
+      alt={userData.login}
+    />
+    <h2>{userData.name || userData.login}</h2>
+    <p>Username: {userData.login}</p>
+    
+     
+    <a 
+      href={userData.html_url} 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      View GitHub Profile
+    </a>
+  </div>
+
         )}
     </div>
-    )
-}};
-
+  );
+}}
    
        
            
