@@ -5,6 +5,16 @@ import recommendations from './RecommendationsList';
 import { zustand, create, addRecipe, setRecipes } from 'zustand';
 
 
+const useRecipeStore = create((set) => ({
+  recipes: [],
+    addRecipes: (newRecipe) => set((state) => ({
+    setRecipes: (recipes) => set({ recipes }),
+    recipes: [...state.recipes, newRecipe],
+  })),
+  searchTerm: '',
+  setSearchTerm: (term) => set({ searchTerm: term }),
+}));
+    
 
 const RecipeList = () => {
   const recipes = useRecipeStore((state) => state.recipes);
@@ -25,3 +35,4 @@ searchTerm = (term) => {
   );
 }};
 
+export default RecipeList;
