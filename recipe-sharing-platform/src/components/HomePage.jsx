@@ -4,6 +4,8 @@ import text from '../data.json';
 import hover from '../hover.json';
 import rounded from '../rounded.json';
 import shadow from '../shadow.json';
+import grid from '../grid.json';
+
  
 
 function Homepage() {
@@ -17,6 +19,8 @@ useEffect(() => {
 
 }, []);
 
+<div className={classNames('text', 'hover', 'rounded', 'shadow', 'grid')}></div>
+
 return (
     <div>
 <h1>Welcome to the Recipe Sharing Platform!</h1>
@@ -29,6 +33,7 @@ return (
 ))}
 </ul>
     </div>
-);}
+)};
+  
 
 export default Homepage;
