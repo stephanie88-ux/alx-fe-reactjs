@@ -84,5 +84,5 @@ const validate = (title, ingredients, cookingInstructions) => {
     return message
   } 
 
-  <div className ={'classNames("text-center", "text-xl", "font-bold", "shadow-lg", "md:text-2xl")'}>Add Recipe Form</div>
+  <div className ={'classNames("text-center", "text-xl", "font-bold", "shadow-lg", "md:text-2xl", "rounded-lg")'}>Add Recipe Form</div>
 export default AddRecipeForm
