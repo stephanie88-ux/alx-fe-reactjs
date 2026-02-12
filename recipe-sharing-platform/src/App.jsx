@@ -4,7 +4,6 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './components/HomePage.jsx'
-import RecipeList from './components/RecipeList.jsx'
 import RecipeDetail from './components/RecipeDetail.jsx'
 
 
