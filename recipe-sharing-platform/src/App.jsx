@@ -2,9 +2,15 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './components/Home'
+import RecipeList from './components/RecipeList'
+import RecipeDetail from './components/RecipeDetail'
+
 
 function App() {
   const [count, setCount] = useState(0)
+
 
   return (
     <>
@@ -29,7 +35,20 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
+
   )
 }
+
+function app () {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/recipes" element={<RecipeList />} />
+        <Route path="/recipes/:id" element={<RecipeDetail />} />
+      </Routes>
+    </Router>
+  )
+} 
 
 export default App
