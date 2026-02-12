@@ -1,4 +1,10 @@
 import { useState, useEffect } from 'react';
+import classNames from 'classnames';
+import text from '../data.json';
+import hover from '../hover.json';
+import rounded from '../rounded.json';
+import shadow from '../shadow.json';
+ 
 
 function Homepage() {
 const [recipes, setRecipes] = useState([]);
