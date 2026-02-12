@@ -1,5 +1,7 @@
 import axios from 'axios'
 import recipeDetail from './data.json'
+import useEffect from 'react'
+import { useParams } from 'react-router-dom'
 
 const RecipeDetail = () => {
     const ingredients = recipeDetail.ingredients.map((ingredient, index) => (
