@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './components/Home'
 import RecipeList from './components/RecipeList'
 import RecipeDetail from './components/RecipeDetail'
-
+import home from './components/HomePage'
 
 function App() {
   const [count, setCount] = useState(0)
