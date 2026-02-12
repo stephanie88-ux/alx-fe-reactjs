@@ -3,10 +3,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Home from './components/Home'
+import Home from './components/HomePage.jsx'
 import RecipeList from './components/RecipeList'
 import RecipeDetail from './components/RecipeDetail'
-import home from './components/HomePage'
+
 
 function App() {
   const [count, setCount] = useState(0)
