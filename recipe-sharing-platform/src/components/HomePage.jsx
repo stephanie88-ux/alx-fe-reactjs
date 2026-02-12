@@ -5,7 +5,7 @@ import hover from '../hover.json';
 import rounded from '../rounded.json';
 import shadow from '../shadow.json';
 import grid from '../grid.json';
-import link from '../link.json';
+import Link from '../link.json';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
  
 
