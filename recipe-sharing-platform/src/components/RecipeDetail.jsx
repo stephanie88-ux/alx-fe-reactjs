@@ -23,4 +23,5 @@ const RecipeDetail = () => {
     );
 }
 
+<div className="text-center text-2xl font-bold shadow-lg">Recipe Detail</div>
 export default RecipeDetail; 
