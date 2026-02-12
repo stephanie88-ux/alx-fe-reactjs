@@ -70,4 +70,18 @@ return (
 )
 }
 
+const validate = (title, ingredients, cookingInstructions) => {
+    if (!title || !ingredients || !cookingInstructions) {
+        return false
+    }
+    return true
+}   
+
+  const errors = validate(title, ingredients, cookingInstructions) ? null : 'Please fill in all fields'
+  return { errors } 
+
+  const setErrors = (message) => {
+    return message
+  } 
+
 export default AddRecipeForm
