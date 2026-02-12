@@ -19,7 +19,7 @@ useEffect(() => {
 
 }, []);
 
-<div className={classNames('text', 'hover', 'rounded', 'shadow', grid['grid-cols-1'], grid['grid-cols-2'], grid['grid-cols-3'])}></div>
+<div className={classNames('text', 'hover', 'rounded', 'shadow', grid['grid-cols-1'], grid['grid-cols-2'], grid['grid-cols-3'], grid['sm:grid-cols-4'], grid['md:grid-cols-5'], grid['lg:grid-cols-6'])}></div>
 
 return (
     <div>
