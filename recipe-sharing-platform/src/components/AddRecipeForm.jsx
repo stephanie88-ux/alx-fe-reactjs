@@ -13,29 +13,35 @@ const submitbutton = (e) => {
 
     handleSubmit()
 }
+const steps = [
+    'Create a form with input fields for the recipe title, ingredients, and cooking instructions.',
+    'Use useState to manage the form data.',
+    'On form submission, send a POST request to the backend API to add the new recipe.',
+    'Handle the response and redirect to the recipe list page if successful.'
+]
 
-const handleSubmit = () => {
-    const newRecipe = {
-        title,
-        ingredients: ingredients.split(',').map(ingredient => ingredient.trim()),
-        cookingInstructions: cookingInstructions.split('.').map(instruction => instruction.trim())
-    }
-
-    fetch('/api/recipes', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(newRecipe)
-    })
-    .then(response => {
-        if (response.ok) {
-            setRedirect(true)
-        } else {
-            throw new Error('Failed to add recipe')
+    function handleSubmit() {
+        const newRecipe = {
+            title,
+            ingredients: ingredients.split(',').map(ingredient => ingredient.trim()),
+            cookingInstructions: cookingInstructions.split('.').map(instruction => instruction.trim())
         }
-    })
-}
+
+        fetch('/api/recipes', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newRecipe)
+        })
+            .then(response => {
+                if (response.ok) {
+                    setRedirect(true)
+                } else {
+                    throw new Error('Failed to add recipe')
+                }
+            })
+    }
 
 if (redirect) {
     return <Navigate to="/recipes" />
